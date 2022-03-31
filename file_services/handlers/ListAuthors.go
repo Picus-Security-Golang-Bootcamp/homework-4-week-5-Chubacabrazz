@@ -8,6 +8,7 @@ import (
 	"github.com/Chubacabrazz/book-db/book_services/author"
 )
 
+//ListAuthors lists all authors from DB, then prints them wih json.encoder
 func (h handler) ListAuthors(w http.ResponseWriter, r *http.Request) {
 	var authors []author.Author
 	if result := h.DB.Find(&authors); result.Error != nil {

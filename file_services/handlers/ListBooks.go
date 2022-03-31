@@ -8,6 +8,7 @@ import (
 	"github.com/Chubacabrazz/book-db/book_services/book"
 )
 
+//ListBooks lists all books from DB, then prints them with json.encoder
 func (h handler) ListBooks(w http.ResponseWriter, r *http.Request) {
 	var books []book.Book
 	if result := h.DB.Find(&books); result.Error != nil {

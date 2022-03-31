@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//GetBook searchs given ID in DB, then prints it wih json.encoder
 func (h handler) GetBook(w http.ResponseWriter, r *http.Request) {
 	var book book.Book
 	vars := mux.Vars(r)

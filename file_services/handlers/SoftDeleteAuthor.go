@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//SoftDeleteAuthor deletes given Author_ID informations from DB, then prints it wih json.encoder
 func (h handler) SoftDeleteAuthor(w http.ResponseWriter, r *http.Request) {
 	var author author.Author
 	vars := mux.Vars(r)

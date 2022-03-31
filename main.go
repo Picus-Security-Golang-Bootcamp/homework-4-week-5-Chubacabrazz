@@ -28,6 +28,8 @@ func main() {
 
 	//Set router and RestAPI
 	router := mux.NewRouter()
+
+	//router.Handlefunc for handling http requests.
 	router.HandleFunc("/books", h.ListBooks).Methods(http.MethodGet)
 	router.HandleFunc("/authors", h.ListAuthors).Methods(http.MethodGet)
 	router.HandleFunc("/books/{id}", h.GetBook).Methods(http.MethodGet)
@@ -35,7 +37,7 @@ func main() {
 	router.HandleFunc("/books/{id}", h.SoftDelete).Methods(http.MethodDelete)
 	router.HandleFunc("/authors/{id}", h.SoftDeleteAuthor).Methods(http.MethodDelete)
 	log.Println("API is running!!")
-	http.ListenAndServe(":8000", router)
+	http.ListenAndServe(":8000", router) //for setting port and keeping server up.
 
 	// Repositories
 	bookRepo := book.NewBookRepository(db)

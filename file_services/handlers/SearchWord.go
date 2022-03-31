@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//SearchWord searches books by name from DB, then prints them wih json.encoder
 func (h handler) SearchWord(w http.ResponseWriter, r *http.Request) {
 	var book []book.Book
 	vars := mux.Vars(r)
