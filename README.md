@@ -22,3 +22,16 @@ For checking APIs, I used Postman. My domain for this example is "localhost:8000
 
 ![deletepostman](https://user-images.githubusercontent.com/77194087/161073311-e4af1221-325d-4be8-bd80-1a8e24532c9b.png)
 
+#### •Func BuyBook : Buys book with ID than update stock on DB. ||| Usage: Generate a PATCH request at "domain/books/buy/{quantity}-{id}" 
+
+![buy1](https://user-images.githubusercontent.com/77194087/161331915-e06ebf17-2ee7-4aa5-af72-ef52130807a9.png)
+
+> •In this example ID:33 belongs to Witcher book. We have 16 books in stock, if we try to buy more book than that (20) we got an error message.
+
+![buy2](https://user-images.githubusercontent.com/77194087/161332171-fef15e49-08dd-497d-a4f7-6bb7ea760d1e.png)
+
+> •Again same book, if we try to buy books that avaible in stock we get a success message, stock is also updated by algorithm.
+
+![buy3](https://user-images.githubusercontent.com/77194087/161332283-835ee557-2f14-43e4-bfd8-57c31131cc36.png)
+
+> •After second request we can see stock is updated and if we try to buy same amount , it returns an error message because of stock.
